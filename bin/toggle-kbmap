@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ "$(setxkbmap -query | grep layout | awk '{print $2}')" == "us" ]; then
+	setxkbmap ru
+else
+	setxkbmap us
+fi 
+
